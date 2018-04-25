@@ -35,5 +35,14 @@ namespace Business
         void UpdateTeacher(Teacher teacher);
         void RemoveTeacher(Teacher teacher);
         #endregion
+
+        #region Courses
+        IEnumerable<Course> GetAllCourses();
+        Course GetCoursesByID(int id);
+        void AddCourse(Course course);
+        void UpdateCourse(Course course);
+        void RemoveCourse(Course course);
+        #endregion
+
     }
 }

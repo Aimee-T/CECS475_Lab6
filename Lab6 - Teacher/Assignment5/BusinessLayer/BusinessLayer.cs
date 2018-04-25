@@ -10,12 +10,14 @@ namespace Business
         private readonly IStandardRepository _standardRepository;
         private readonly IStudentRepository _studentRepository;
         private readonly ITeacherRepository _teacherRepository;
+        private readonly ICourseRepository _courseRepository;
 
         public BusinessLayer()
         {
             _standardRepository = new StandardRepository();
-            _studentRepository = new StudentRepository(); 
-
+            _studentRepository = new StudentRepository();
+            _teacherRepository = new TeacherRepository();
+            _courseRepository = new CourseRepository();
         }
 
         #region Standard
@@ -103,6 +105,33 @@ namespace Business
         public void RemoveTeacher(Teacher teacher)
         {
             _teacherRepository.Delete(teacher);
+        }
+        #endregion
+
+        #region Courses
+        public IEnumerable<Course> GetAllCourses()
+        {
+            return _courseRepository.GetAll();
+        }
+
+        public Course GetCoursesByID(int id)
+        {
+            return _courseRepository.GetById(id);
+        }
+
+        public void AddCourse(Course course)
+        {
+            _courseRepository.Insert(course);
+        }
+
+        public void UpdateCourse(Course course)
+        {
+            _courseRepository.Update(course);
+        }
+
+        public void RemoveCourse(Course course)
+        {
+            _courseRepository.Delete(course);
         }
         #endregion
 
