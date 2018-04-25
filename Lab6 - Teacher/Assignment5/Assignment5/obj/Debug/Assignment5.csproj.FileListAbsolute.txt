@@ -59,3 +59,22 @@ C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.pdb
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe.config
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\SchoolDB.mdf
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\SchoolDB_log.ldf
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.dll
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.pdb
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe.config
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.pdb
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.xml
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.csprojResolveAssemblyReference.cache
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.pdb

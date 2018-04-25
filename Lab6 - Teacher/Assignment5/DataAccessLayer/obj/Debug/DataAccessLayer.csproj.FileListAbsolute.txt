@@ -50,3 +50,16 @@ C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Aimee\Documents\Visual Studio 2017\CECS 475\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\SchoolDB.mdf
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\SchoolDB_log.ldf
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

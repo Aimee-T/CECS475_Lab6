@@ -9,11 +9,13 @@ namespace Business
     {
         private readonly IStandardRepository _standardRepository;
         private readonly IStudentRepository _studentRepository;
+        private readonly ITeacherRepository _teacherRepository;
 
         public BusinessLayer()
         {
             _standardRepository = new StandardRepository();
             _studentRepository = new StudentRepository(); 
+
         }
 
         #region Standard
@@ -76,5 +78,34 @@ namespace Business
             _studentRepository.Delete(student);
         }
         #endregion
+
+        #region Teacher
+        public IEnumerable<Teacher> getAllTeachers()
+        {
+            return _teacherRepository.GetAll();
+        }
+
+        public Teacher GetTeacherByID(int id)
+        {
+            return _teacherRepository.GetById(id);
+         }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            _teacherRepository.Insert(teacher);
+        }
+
+        public void UpdateTeacher(Teacher teacher)
+        {
+            _teacherRepository.Update(teacher);
+        }
+
+        public void RemoveTeacher(Teacher teacher)
+        {
+            _teacherRepository.Delete(teacher);
+        }
+        #endregion
+
+
     }
 }

@@ -29,6 +29,11 @@ namespace Business
         #endregion
 
         #region Teachers
+        IEnumerable<Teacher> getAllTeachers();
+        Teacher GetTeacherByID(int id);
+        void AddTeacher(Teacher teacher);
+        void UpdateTeacher(Teacher teacher);
+        void RemoveTeacher(Teacher teacher);
         #endregion
     }
 }
