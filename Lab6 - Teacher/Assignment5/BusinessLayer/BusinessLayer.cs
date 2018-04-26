@@ -65,7 +65,7 @@ namespace Business
             return _studentRepository.GetById(id);
         }
 
-        public void addStudent(Student student)
+        public void AddStudent(Student student)
         {
             _studentRepository.Insert(student);
         }
@@ -114,7 +114,7 @@ namespace Business
             return _courseRepository.GetAll();
         }
 
-        public Course GetCoursesByID(int id)
+        public Course GetCourseByID(int id)
         {
             return _courseRepository.GetById(id);
         }

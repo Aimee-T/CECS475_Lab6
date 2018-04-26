@@ -78,3 +78,22 @@ C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assig
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.exe
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\SchoolDB.mdf
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\SchoolDB_log.ldf
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.dll
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\Business.exe.config
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.xml
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.csprojResolveAssemblyReference.cache
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\Assignment5\obj\Debug\Assignment5.pdb

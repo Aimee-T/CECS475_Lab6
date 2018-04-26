@@ -10,116 +10,191 @@ namespace Assignment5
 {
     public class Program
     {
+        static void Add(BusinessLayer myBusinessLayer, LayerType layerType)
+        {
+
+            Console.WriteLine("Name:");
+            string Name = Console.ReadLine();
+            switch(layerType)
+            {
+                case LayerType.STANDARD:
+                    Standard newStandard = new Standard() { StandardName = Name };
+                    myBusinessLayer.AddStandard(newStandard);
+                    Console.WriteLine("Standard: " + Name + " created.");
+                    break;
+                case LayerType.STUDENT:
+                    Student newStudent = new Student() { StudentName = Name };
+                    myBusinessLayer.AddStudent(newStudent);
+                    Console.WriteLine("Student: " + Name + " created.");
+                    break;
+                case LayerType.TEACHER:
+                    Teacher newTeacher = new Teacher() { TeacherName = Name };
+                    myBusinessLayer.AddTeacher(newTeacher);
+                    Console.WriteLine("Teacher: " + Name + " created.");
+                    break;
+                case LayerType.COURSE:
+                    Course newCourse = new Course() { CourseName = Name };
+                    myBusinessLayer.AddCourse(newCourse);
+                    Console.WriteLine("Course: " + Name + " created.");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        static void Update(BusinessLayer myBusinessLayer, LayerType layerType)
+        {
+
+            Console.WriteLine("Name or Id:");
+            string Name = Console.ReadLine();
+            switch (layerType)
+            {
+                case LayerType.STANDARD:
+
+                    break;
+                case LayerType.STUDENT:
+
+                    break;
+                case LayerType.TEACHER:
+  
+                    break;
+                case LayerType.COURSE:
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        static void Delete(BusinessLayer myBusinessLayer, LayerType layerType)
+        {
+
+            Console.WriteLine("Id to delete:");
+            int Id = Int32.Parse(Console.ReadLine());
+            switch (layerType)
+            {
+                case LayerType.STANDARD:
+                   
+                    if (myBusinessLayer.GetStandardByID(Id) == null)
+                        Console.WriteLine("No standard by that ID or Name was found.");
+                    else
+                        Console.WriteLine("Standard: " + myBusinessLayer.GetStandardByID(Id).StandardName + " has been deleted");
+                        myBusinessLayer.RemoveStandard(myBusinessLayer.GetStandardByID(Id));
+                    break;
+                case LayerType.STUDENT:
+                    if (myBusinessLayer.GetStudentByID(Id) == null)
+                        Console.WriteLine("No student by that ID or Name was found. Returning to main menu");
+                    else
+                    {
+                        Console.WriteLine("Student: " + myBusinessLayer.GetStudentByID(Id).StudentName + " has been deleted");
+                        myBusinessLayer.RemoveStudent(myBusinessLayer.GetStudentByID(Id));
+                    }
+                    break;
+                case LayerType.TEACHER:
+                    if (myBusinessLayer.GetTeacherByID(Id) == null)
+                        Console.WriteLine("No teacher by that ID or Name was found. Returning to main menu");
+                    else
+                    {
+                        Console.WriteLine("Teacher: " + myBusinessLayer.GetTeacherByID(Id).TeacherName + " has been deleted");
+                        myBusinessLayer.RemoveTeacher(myBusinessLayer.GetTeacherByID(Id));
+                    }
+                    break;
+                case LayerType.COURSE:
+                    if (myBusinessLayer.GetCourseByID(Id) == null)
+                        Console.WriteLine("No Course by that ID or Name was found. Returning to main menu");
+                    else
+                    {
+                        Console.WriteLine("Course: " + myBusinessLayer.GetCourseByID(Id).CourseName + " has been deleted");
+                        myBusinessLayer.RemoveCourse(myBusinessLayer.GetCourseByID(Id));
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
         static void Main(string[] args)
         {
-            int a = -1;
+            int choice = -1;
             do
             {
                 Console.WriteLine
                    (
-                   "\n 0. Exit Program \n 1. Add Standard \n 2. Update Standard \n" +
-                   " 3. Delete Standard \n 4. Get All Standards \n 5. Add Student \n" +
-                   " 6. Update Student \n 7. Delete Student \n" +
-                   " 8. Get All Students \n"
+                   "\n 0. Exit Program \n 1. Add Teacher \n 2. Update Teacher \n" +
+                   " 3. Delete Teacher \n 4. Get Teacher's courses \n 5. Display all standards \n" +
+                   " 6. Add Course \n 7. Update Course \n" +
+                   " 8. Delete Course \n 9. Display all courses\n"
                    );
-                try { a = Int32.Parse(Console.ReadLine()); } catch { Console.WriteLine("Not Valid Menu Selection"); }
-                Console.WriteLine("\n");
+                try {
+                    choice = Int32.Parse(Console.ReadLine());
+                }
+                catch {
+                    Console.WriteLine("Selection invalid\n");
+                }
 
                 BusinessLayer myBusinessLayer = new BusinessLayer();
 
-                switch (a)
+                switch (choice)
                 {
                     case 0:
                         Environment.Exit(0);
                         break;
                     case 1:
-                        Console.WriteLine("Standard Name:");
-                        string sName = Console.ReadLine();
-                        Console.WriteLine();
-                        DataAccessLayer.Standard newStandard = new DataAccessLayer.Standard() { StandardName = sName };
-                        myBusinessLayer.AddStandard(newStandard);
-                        Console.WriteLine("Standard: " + sName + " created.");
+                        Add(myBusinessLayer, LayerType.TEACHER);
                         break;
                     case 2:
-                        Console.WriteLine("Enter Standard Id:");
-                        int nameStan = Int32.Parse(Console.ReadLine());
-                        if (myBusinessLayer.GetStandardByID(nameStan) != null)
-                        {
-                            Console.WriteLine("\n1.Update Standard Name 2. Get All Teachers in Standard \n 3. Get All Students in Standard \n");
-                            int menuOption = Int32.Parse(Console.ReadLine());
-                            if (menuOption == 1)
-                            {
-                                Console.WriteLine("Enter New Name For Standard");
-                                myBusinessLayer.GetStandardByID(nameStan).StandardName = Console.ReadLine();
-                                myBusinessLayer.UpdateStandard(myBusinessLayer.GetStandardByID(nameStan));
-                                Console.WriteLine("Standard Name has been updated to: " + myBusinessLayer.GetStandardByID(nameStan).StandardName);
-                            }
-                            if (menuOption == 2)
-                            {
-                                var b = myBusinessLayer.GetStandardByID(nameStan).Teachers;
-                                if (b != null)
-                                {
-                                    Console.WriteLine("Teachers in standard :" + myBusinessLayer.GetStandardByID(nameStan).StandardName + "\n");
-                                    foreach (var c in b)
-                                    {
-                                        Console.WriteLine("ID:" + c.TeacherId + " Name:" + c.TeacherName + "\n");
-                                    }
-
-                                }
-
-                            }
-                            else if (menuOption == 3)
-                            {
-
-                                var b = myBusinessLayer.GetStandardByID(nameStan).Students;
-                                if (b != null)
-                                {
-                                    Console.WriteLine("Students in standard :" + myBusinessLayer.GetStandardByID(nameStan).StandardName + "\n");
-                                    foreach (var c in b)
-                                    {
-                                        Console.WriteLine("ID: " + c.StudentID + " " + c.StudentName + "\n");
-                                    }
-
-                                }
-
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Standard by that ID wasnt found");
-                        }
+                       //Update Teacher
                         break;
                     case 3:
-                        Console.WriteLine("ID of Standard to Delete");
-                        int idStud = Int32.Parse(Console.ReadLine());
-                        if (myBusinessLayer.GetStandardByID(idStud) == null)
-                        {
-                            Console.WriteLine("No standard by that ID or Name was found. Returning to main menu");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Standard: " + myBusinessLayer.GetStandardByID(idStud).StandardName + " has been deleted");
-                            myBusinessLayer.RemoveStandard(myBusinessLayer.GetStandardByID(idStud));
-                        }
+                        Delete(myBusinessLayer, LayerType.COURSE);
                         break;
                     case 4:
-
+                        //get all teacher's courses
+                        break;
+                    case 5:
                         foreach (var b in myBusinessLayer.GetAllStandards())
                         {
                             Console.WriteLine(b.StandardId + " " + b.StandardName + " " + b.Description);
                         }
-
-                        break;
-                    case 5:
-                        Console.WriteLine("Student Name:");
-                        string sName1 = Console.ReadLine();
-                        DataAccessLayer.Student newStudenttoAdd = new DataAccessLayer.Student();
-                        newStudenttoAdd.StudentName = sName1;
-                        myBusinessLayer.addStudent(newStudenttoAdd);
-                        Console.WriteLine("Student Created: " + newStudenttoAdd.StudentName + " created.");
                         break;
                     case 6:
-                        Console.WriteLine("Enter Student ID: ");
+                        Add(myBusinessLayer, LayerType.COURSE);
+                        break;
+                    case 7:
+                        //Update Course
+                        break;
+                    case 8:
+                        Delete(myBusinessLayer, LayerType.COURSE);
+                        break;
+                    case 9:
+                        var allCoursesPrint = myBusinessLayer.GetAllCourses().GroupBy(c => c.CourseId).Select(t => t.First());
+                        foreach (var course in allCoursesPrint)
+                        {
+                            Console.WriteLine(course.CourseId + " " + course.CourseName + " ");
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("Please select a valid Menu Option");
+                        break;
+                }
+            }
+            while ((choice >= 0) & (choice < 10));
+        }
+    }
+
+    enum LayerType
+    {
+        STANDARD,
+        STUDENT,
+        TEACHER,
+        COURSE
+    }
+}
+
+
+/*
+ *  Console.WriteLine("Enter Student ID: ");
                         int nx = int.Parse(Console.ReadLine());
                         if (myBusinessLayer.getAllStudents().Where(s => s.StudentID == nx).FirstOrDefault() == null)
                         {
@@ -160,34 +235,4 @@ namespace Assignment5
                                 Console.WriteLine("No valid menu option selected. Returning to main menu");
                             }
                         }
-                        break;
-                    case 7:
-                        Console.WriteLine("ID of Student to Delete");
-                        int idDeleteStud = Int32.Parse(Console.ReadLine());
-                        if (myBusinessLayer.GetStudentByID(idDeleteStud) == null)
-                        {
-                            Console.WriteLine("No student by that ID or Name was found. Returning to main menu");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Student: " + myBusinessLayer.GetStudentByID(idDeleteStud).StudentName + " has been deleted");
-                            myBusinessLayer.RemoveStudent(myBusinessLayer.GetStudentByID(idDeleteStud));
-                        }
-                        break;
-                    case 8:
-                        var allStudentsPrint = myBusinessLayer.getAllStudents().GroupBy(s => s.StudentID).Select(t => t.First());
-                        foreach (var b in allStudentsPrint)
-                        {
-                            Console.WriteLine(b.StudentID + " " + b.StudentName + " ");
-                        }
-                        break;
-
-                    default:
-                        Console.WriteLine("Please select a valid Menu Option");
-                        break;
-                }
-            }
-            while ((a >= 0) & (a < 12));
-        }
-    }
-}
+*/

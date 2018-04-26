@@ -22,7 +22,7 @@ namespace Business
         #region Student
         IList<Student> getAllStudents();
         Student GetStudentByID(int id);
-        void addStudent(Student student);
+        void AddStudent(Student student);
         void UpdateStudent(Student student);
         void RemoveStudent(Student student);
 
@@ -38,7 +38,7 @@ namespace Business
 
         #region Courses
         IEnumerable<Course> GetAllCourses();
-        Course GetCoursesByID(int id);
+        Course GetCourseByID(int id);
         void AddCourse(Course course);
         void UpdateCourse(Course course);
         void RemoveCourse(Course course);

@@ -63,3 +63,16 @@ C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataA
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 C:\Users\Aimee\Documents\GitKraken\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\SchoolDB.mdf
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\SchoolDB_log.ldf
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Helidia\Documents\CSULB\475 - Programing With Frameowrks\CECS475_Lab6\Lab6 - Teacher\Assignment5\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
