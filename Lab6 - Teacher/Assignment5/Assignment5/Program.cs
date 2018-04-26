@@ -45,9 +45,6 @@ namespace Assignment5
         static void Update(BusinessLayer myBusinessLayer, LayerType layerType)
         {
 
-            //Console.WriteLine("Enter Id:");
-            //string Name = Console.ReadLine();
-            //int Name = Int32.Parse(Console.ReadLine());
             switch (layerType)
             {
                 case LayerType.STANDARD:
@@ -71,7 +68,6 @@ namespace Assignment5
     
                     break;
                 case LayerType.COURSE:
-                    //Console.WriteLine("Enter New Name for Course: ");
                     foreach (var s in myBusinessLayer.GetAllCourses())
                     {
                         Console.WriteLine(s.CourseId + " " + s.CourseName);
@@ -79,7 +75,7 @@ namespace Assignment5
                     Console.WriteLine("Enter Course ID: ");
                     int Name2 = Int32.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Enter New Name For Teacher: ");
+                    Console.WriteLine("Enter New Name For Course: ");
                     myBusinessLayer.GetCourseByID(Name2).CourseName = Console.ReadLine();
                     myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
                     Console.WriteLine("Course name has been updated to: " + myBusinessLayer.GetCourseByID(Name2).CourseName);
@@ -173,7 +169,6 @@ namespace Assignment5
                         break;
                     case 2:
                         Update(myBusinessLayer, LayerType.TEACHER);
-                       //Update Teacher
                         break;
                     case 3:
                         Delete(myBusinessLayer, LayerType.COURSE);
@@ -197,7 +192,7 @@ namespace Assignment5
                         Add(myBusinessLayer, LayerType.COURSE);
                         break;
                     case 7:
-                        //Update Course
+                        Update(myBusinessLayer, LayerType.COURSE);
                         break;
                     case 8:
                         Delete(myBusinessLayer, LayerType.COURSE);
