@@ -149,12 +149,18 @@ namespace Assignment5
                         Delete(myBusinessLayer, LayerType.COURSE);
                         break;
                     case 4:
-                        //get all teacher's courses
+                        Console.WriteLine("Teacher Id:");
+                        int Id = Int32.Parse(Console.ReadLine());
+                        var coursesPrint = myBusinessLayer.GetAllCourses().Where(c => c.TeacherId == Id);
+                        foreach (var course in coursesPrint)
+                        {
+                            Console.WriteLine(course.CourseId + " " + course.CourseName + " ");
+                        }
                         break;
                     case 5:
-                        foreach (var b in myBusinessLayer.GetAllStandards())
+                        foreach (var s in myBusinessLayer.GetAllStandards())
                         {
-                            Console.WriteLine(b.StandardId + " " + b.StandardName + " " + b.Description);
+                            Console.WriteLine(s.StandardId + " " + s.StandardName + " " + s.Description);
                         }
                         break;
                     case 6:
@@ -167,10 +173,9 @@ namespace Assignment5
                         Delete(myBusinessLayer, LayerType.COURSE);
                         break;
                     case 9:
-                        var allCoursesPrint = myBusinessLayer.GetAllCourses().GroupBy(c => c.CourseId).Select(t => t.First());
-                        foreach (var course in allCoursesPrint)
+                        foreach (var c in myBusinessLayer.GetAllCourses())
                         {
-                            Console.WriteLine(course.CourseId + " " + course.CourseName + " ");
+                            Console.WriteLine(c.CourseId + " " + c.CourseName);
                         }
                         break;
 
