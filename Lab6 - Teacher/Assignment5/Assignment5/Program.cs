@@ -33,7 +33,9 @@ namespace Assignment5
                     Console.WriteLine("Teacher: " + Name + " created.");
                     break;
                 case LayerType.COURSE:
-                    Course newCourse = new Course() { CourseName = Name };
+                    Console.WriteLine("Teacher Id:");
+                    int Id = Int32.Parse(Console.ReadLine());
+                    Course newCourse = new Course() { CourseName = Name, TeacherId = Id };
                     myBusinessLayer.AddCourse(newCourse);
                     Console.WriteLine("Course: " + Name + " created.");
                     break;
@@ -74,11 +76,38 @@ namespace Assignment5
                     }
                     Console.WriteLine("Enter Course ID: ");
                     int Name2 = Int32.Parse(Console.ReadLine());
+                    int choice = -1;
+                    Console.WriteLine
+                                      (
+                                      "\n 0. Update Name \n " +
+                                      "1. Update Teacher \n "
+                                      );
+                    try
+                    {
+                        choice = Int32.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Selection invalid\n");
+                    }
+                    switch (choice)
+                    {
+                        case 0:
+                            Console.WriteLine("Enter New Name For Course: ");
+                            myBusinessLayer.GetCourseByID(Name2).CourseName = Console.ReadLine();
+                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
+                            Console.WriteLine("Course name has been updated to: " + myBusinessLayer.GetCourseByID(Name2).CourseName);
+                            break;
+                        case 1:
+                            Console.WriteLine("Enter New Teacher Id For Course: ");
+                            myBusinessLayer.GetCourseByID(Name2).TeacherId = Int32.Parse(Console.ReadLine());
+                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
+                            Console.WriteLine("Course teacher id has been updated to: " + myBusinessLayer.GetCourseByID(Name2).TeacherId);
+                            break;
+                        default:
+                            break;
+                    }
 
-                    Console.WriteLine("Enter New Name For Course: ");
-                    myBusinessLayer.GetCourseByID(Name2).CourseName = Console.ReadLine();
-                    myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
-                    Console.WriteLine("Course name has been updated to: " + myBusinessLayer.GetCourseByID(Name2).CourseName);
                     break;
                 default:
                     break;
