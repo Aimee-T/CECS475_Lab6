@@ -104,6 +104,12 @@ namespace Business
 
         public void RemoveTeacher(Teacher teacher)
         {
+            var courses = GetAllCourses().Where(c => c.TeacherId == teacher.TeacherId);
+            foreach (Course course in courses)
+            {
+                course.TeacherId = null;
+                UpdateCourse(course);
+            }
             _teacherRepository.Delete(teacher);
         }
         #endregion

@@ -50,10 +50,30 @@ namespace Assignment5
             switch (layerType)
             {
                 case LayerType.STANDARD:
-                    // No Work
+                    foreach (var s in myBusinessLayer.GetAllStandards())
+                    {
+                        Console.WriteLine(s.StandardId + " " + s.StandardName);
+                    }
+                    Console.WriteLine("Enter Standard ID: ");
+                    int NameStandard = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Enter New Name For Standard: ");
+                    myBusinessLayer.GetStandardByID(NameStandard).StandardName = Console.ReadLine();
+                    myBusinessLayer.UpdateStandard(myBusinessLayer.GetStandardByID(NameStandard));
+                    Console.WriteLine("Standard name has been updated to:  " + myBusinessLayer.GetStandardByID(NameStandard).StandardName);
                     break;
                 case LayerType.STUDENT:
-                    // No Work
+                    foreach (var s in myBusinessLayer.getAllStudents())
+                    {
+                        Console.WriteLine(s.StudentID + " " + s.StudentName);
+                    }
+                    Console.WriteLine("Enter Student ID: ");
+                    int NameStudent = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Enter New Name For Student: ");
+                    myBusinessLayer.GetStudentByID(NameStudent).StudentName = Console.ReadLine();
+                    myBusinessLayer.UpdateStudent(myBusinessLayer.GetStudentByID(NameStudent));
+                    Console.WriteLine("Student name has been updated to:  " + myBusinessLayer.GetStudentByID(NameStudent).StudentName);
                     break;
                 case LayerType.TEACHER:
                     foreach (var s in myBusinessLayer.getAllTeachers())
@@ -61,12 +81,12 @@ namespace Assignment5
                         Console.WriteLine(s.TeacherId + " " + s.TeacherName );
                     }
                     Console.WriteLine("Enter Teacher ID: ");
-                    int Name = Int32.Parse(Console.ReadLine());
+                    int NameTeacher = Int32.Parse(Console.ReadLine());
 
                     Console.WriteLine("Enter New Name For Teacher: ");
-                    myBusinessLayer.GetTeacherByID(Name).TeacherName = Console.ReadLine();
-                    myBusinessLayer.UpdateTeacher(myBusinessLayer.GetTeacherByID(Name));
-                    Console.WriteLine("Teacher name has been updated to:  " + myBusinessLayer.GetTeacherByID(Name).TeacherName);
+                    myBusinessLayer.GetTeacherByID(NameTeacher).TeacherName = Console.ReadLine();
+                    myBusinessLayer.UpdateTeacher(myBusinessLayer.GetTeacherByID(NameTeacher));
+                    Console.WriteLine("Teacher name has been updated to:  " + myBusinessLayer.GetTeacherByID(NameTeacher).TeacherName);
     
                     break;
                 case LayerType.COURSE:
@@ -75,7 +95,7 @@ namespace Assignment5
                         Console.WriteLine(s.CourseId + " " + s.CourseName);
                     }
                     Console.WriteLine("Enter Course ID: ");
-                    int Name2 = Int32.Parse(Console.ReadLine());
+                    int NameCourse = Int32.Parse(Console.ReadLine());
                     int choice = -1;
                     Console.WriteLine
                                       (
@@ -94,15 +114,15 @@ namespace Assignment5
                     {
                         case 0:
                             Console.WriteLine("Enter New Name For Course: ");
-                            myBusinessLayer.GetCourseByID(Name2).CourseName = Console.ReadLine();
-                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
-                            Console.WriteLine("Course name has been updated to: " + myBusinessLayer.GetCourseByID(Name2).CourseName);
+                            myBusinessLayer.GetCourseByID(NameCourse).CourseName = Console.ReadLine();
+                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(NameCourse));
+                            Console.WriteLine("Course name has been updated to: " + myBusinessLayer.GetCourseByID(NameCourse).CourseName);
                             break;
                         case 1:
                             Console.WriteLine("Enter New Teacher Id For Course: ");
-                            myBusinessLayer.GetCourseByID(Name2).TeacherId = Int32.Parse(Console.ReadLine());
-                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(Name2));
-                            Console.WriteLine("Course teacher id has been updated to: " + myBusinessLayer.GetCourseByID(Name2).TeacherId);
+                            myBusinessLayer.GetCourseByID(NameCourse).TeacherId = Int32.Parse(Console.ReadLine());
+                            myBusinessLayer.UpdateCourse(myBusinessLayer.GetCourseByID(NameCourse));
+                            Console.WriteLine("Course teacher id has been updated to: " + myBusinessLayer.GetCourseByID(NameCourse).TeacherId);
                             break;
                         default:
                             break;
@@ -169,15 +189,14 @@ namespace Assignment5
                 Console.WriteLine
                    (
                    "\n 0. Exit Program \n " +
-                   "1. Add Teacher \n " +
-                   "2. Update Teacher \n" +
-                   " 3. Delete Teacher \n " +
-                   "4. Get Teacher's courses \n " +
-                   "5. Display all standards \n" +
-                   " 6. Add Course \n " +
-                   "7. Update Course \n" +
-                   " 8. Delete Course \n " +
-                   "9. Display all courses\n"
+                   "1. Add Standard \n " +
+                   "2. Update Standard \n" +
+                   " 3. Delete Standard \n " +
+                   "4. Display all standards \n" +
+                   " 5. Add Student \n " +
+                   "6. Update Student \n" +
+                   " 7. Delete Student \n " +
+                   "8. Display all students\n"
                    );
                 try {
                     choice = Int32.Parse(Console.ReadLine());
@@ -194,42 +213,33 @@ namespace Assignment5
                         Environment.Exit(0);
                         break;
                     case 1:
-                        Add(myBusinessLayer, LayerType.TEACHER);
+                        Add(myBusinessLayer, LayerType.STANDARD);
                         break;
                     case 2:
-                        Update(myBusinessLayer, LayerType.TEACHER);
+                        Update(myBusinessLayer, LayerType.STANDARD);
                         break;
                     case 3:
-                        Delete(myBusinessLayer, LayerType.COURSE);
+                        Delete(myBusinessLayer, LayerType.STANDARD);
                         break;
                     case 4:
-                        Console.WriteLine("Teacher Id:");
-                        int Id = Int32.Parse(Console.ReadLine());
-                        var coursesPrint = myBusinessLayer.GetAllCourses().Where(c => c.TeacherId == Id);
-                        foreach (var course in coursesPrint)
-                        {
-                            Console.WriteLine(course.CourseId + " " + course.CourseName + " ");
-                        }
-                        break;
-                    case 5:
                         foreach (var s in myBusinessLayer.GetAllStandards())
                         {
                             Console.WriteLine(s.StandardId + " " + s.StandardName + " " + s.Description);
                         }
                         break;
+                    case 5:
+                        Add(myBusinessLayer, LayerType.STUDENT);
+                        break;
                     case 6:
-                        Add(myBusinessLayer, LayerType.COURSE);
+                        Update(myBusinessLayer, LayerType.STUDENT);
                         break;
                     case 7:
-                        Update(myBusinessLayer, LayerType.COURSE);
+                        Delete(myBusinessLayer, LayerType.STUDENT);
                         break;
                     case 8:
-                        Delete(myBusinessLayer, LayerType.COURSE);
-                        break;
-                    case 9:
-                        foreach (var c in myBusinessLayer.GetAllCourses())
+                        foreach (var s in myBusinessLayer.getAllStudents())
                         {
-                            Console.WriteLine(c.CourseId + " " + c.CourseName);
+                            Console.WriteLine(s.StudentID + " " + s.StudentName);
                         }
                         break;
 
